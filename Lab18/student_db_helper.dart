@@ -64,7 +64,7 @@ class StudentHelper {
         return false;
     }
 
-    Future<List<Student>> getALl() async {
+    Future<List<Student>> getAll() async {
       Database database = await db;
       List<Map> students = await database.query('STUDENT');
 
@@ -74,3 +74,4 @@ class StudentHelper {
     }
 
 }
+
