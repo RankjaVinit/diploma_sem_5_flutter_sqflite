@@ -4,6 +4,14 @@ import 'package:sqflite/sqflite.dart';
 import '../Lab18/student_model.dart';
 
 class StudentHelper {
+
+    StudentHelper._internal();
+    static StudentHelper _instance = StudentHelper._internal();
+
+    factory StudentHelper() {
+      return _instance;
+    }
+    
     Database? _db;
 
     Future<Database> get db async {
@@ -56,14 +64,13 @@ class StudentHelper {
         return false;
     }
 
+    Future<List<Student>> getALl() async {
+      Database database = await db;
+      List<Map> students = await database.query('STUDENT');
 
+      return students.map((student) {
+        return Student.fromMap(student);
+      }).toList();
+    }
 
-
-
-
-// Future<List<Student>> getAll() async {
-//     Database database = await db;
-//     List<Map> students = await database.query('STUDENT');
-//     return students.map((student) => Student.fromMap(student)).toList();
-// }
 }
