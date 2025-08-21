@@ -173,6 +173,7 @@ class _StudentFormState extends State<StudentForm> {
                           ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(content: Text('Student added successfully'))
                           );
+                          Navigator.of(context).pop();
                       }
                   }
                 }, child: Text('Submit')),
