@@ -1,4 +1,4 @@
-import 'package:diploma_sem_5_flutter_labs/Lab17/student_model.dart';
+import 'package:sqflite_demo/diploma_sem_5_flutter_sqflite/Lab17/student_model.dart';
 import 'package:flutter/material.dart';
 
 
@@ -6,11 +6,11 @@ class ListDemo1 extends StatelessWidget {
   ListDemo1({super.key});
 
   List<Student> students=[
-    Student( name: "abc", age: 20, id: 1),
-    Student( name: "abc", age: 20, id: 2),
-    Student( name: "abc", age: 20, id: 3),
-    Student( name: "abc", age: 20, id: 4),
-    Student( name: "abc", age: 20, id: 5),
+    Student( name: "abc", enrollmentNumber: '1', branch: "CSE", mobileNumber: "1234567890", semester: 5, password: "123456"),
+    Student( name: "abc", enrollmentNumber: '1', branch: "CSE", mobileNumber: "1234567890", semester: 5, password: "123456"),
+    Student( name: "abc", enrollmentNumber: '1', branch: "CSE", mobileNumber: "1234567890", semester: 5, password: "123456"),
+    Student( name: "abc", enrollmentNumber: '1', branch: "CSE", mobileNumber: "1234567890", semester: 5, password: "123456"),
+    Student( name: "abc", enrollmentNumber: '1', branch: "CSE", mobileNumber: "1234567890", semester: 5, password: "123456"),
   ];
 
   @override
@@ -25,7 +25,7 @@ class ListDemo1 extends StatelessWidget {
           Student s1=students[index];
           return ListTile(
             title: Text(s1.name.toString()),
-            subtitle: Text(s1.age.toString()),
+            subtitle: Text(s1.enrollmentNumber),
           );
         },
       ),

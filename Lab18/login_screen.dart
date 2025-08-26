@@ -1,7 +1,5 @@
-import 'package:diploma_sem_5_flutter_labs/Lab18/student_db_helper.dart';
+import 'package:sqflite_demo/diploma_sem_5_flutter_sqflite/Lab17/student_db_helper.dart';
 import 'package:flutter/material.dart';
-
-import '../Lab18/student_model.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
