@@ -1,47 +1,44 @@
 class Student {
-  int id;
-  String name;
-  int age;
+   int? id;
+   String name;
+   String enrollmentNumber;
+   int semester;
+   String branch;
+   String mobileNumber;
+   String password;
 
-  Student({ required this.id, required this.name, required this.age});
+   Student({
+     this.id,
+     required this.name,
+     required this.enrollmentNumber,
+     required this.semester,
+     required this.branch,
+     required this.mobileNumber,
+     required this.password
+   });
 
-  Map toMap(Student student){
-      return {
-        "ID" : student.id,
-        "NAME": student.name,
-        "AGE": student.age
-      };
-  }
+   static Map<String, dynamic> toMap(Student student){
+     return {
+       "ID" : student.id,
+       "NAME": student.name,
+       "ENROLLMENT_NUMBER": student.enrollmentNumber,
+       "SEMESTER": student.semester,
+       "BRANCH": student.branch,
+       "MOBILE_NUMBER": student.mobileNumber,
+       "PASSWORD": student.password
+     };
+   }
 
-  Student fromMap(Map student){
-      return Student(
-          id: student['ID'],
-          name: student['NAME'],
-          age: student['AGE']
-      );
-  }
+   factory Student.fromMap(Map map){
+     return Student(
+         id: map["ID"],
+         name: map["NAME"],
+         enrollmentNumber: map["ENROLLMENT_NUMBER"],
+         semester: map["SEMESTER"],
+         branch: map["BRANCH"],
+         mobileNumber: map["MOBILE_NUMBER"],
+         password: map["PASSWORD"]
+     );
+   }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// class Student {
-//   int id;
-//   String? name;
-//   int? age;
-//
-//   Student({required this.id, this.name, this.age});
-// }
