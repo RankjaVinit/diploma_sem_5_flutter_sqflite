@@ -28,11 +28,7 @@ class Product {
 }
 
 
-
 void main() {
-
-
-
   Product p = Product(
     id: 1,
     title: "ABC",

@@ -1,9 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
-
 import 'Practical2.dart';
-
 
 class JsonFromAssetExample extends StatefulWidget {
   const JsonFromAssetExample({super.key});

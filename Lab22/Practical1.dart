@@ -6,7 +6,7 @@ import 'Practical2.dart';
 
 class UserListScreen extends StatelessWidget {
 
-  final String apiUrl = "https://67d1b97690e0670699bb4eae.mockapi.io/user_detail";
+  final String apiUrl = "https://68b7ca91b71540504325e5b1.mockapi.io/user_detail";
 
   // Future<List<Map<String,dynamic>>> fetchUsers() async {
   //   final response = await http.get(Uri.parse(apiUrl));

@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 class UserDetailScreen extends StatelessWidget {
   final String id;
-  final String baseUrl = "https://67d1b97690e0670699bb4eae.mockapi.io/user_detail";
+  final String baseUrl = "https://68b7ca91b71540504325e5b1.mockapi.io/user_detail";
 
   UserDetailScreen({required this.id});
 
@@ -40,7 +40,7 @@ class UserDetailScreen extends StatelessWidget {
                   SizedBox(height: 10),
                   Text("Email: ${user['email']}",),
                   SizedBox(height: 10),
-                  Text("Dob: ${DateTime.parse(user['dob']).toLocal().toString().split(' ')[0]}",),
+                  Text("Dob: ${user['dob']}",),
                   SizedBox(height: 10),
                   Text("Address: ${user['address']}",),
                   SizedBox(height: 10),

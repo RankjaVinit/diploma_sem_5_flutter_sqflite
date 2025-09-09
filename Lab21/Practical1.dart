@@ -58,7 +58,26 @@ class MaterialAlertExample extends StatelessWidget {
           children: [
 
             ElevatedButton(
-              onPressed: () => showMaterialDialog(context),
+              onPressed:() {
+                showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title:  Text("Material Alert"),
+                      content:  Text("This is a Material (Android) Alert Dialog."),
+                      actions: [
+                        TextButton(
+                          onPressed: () => Navigator.pop(context,false),
+                          child: Text("Cancle",),
+                        ),
+                        TextButton(
+                          onPressed: () => Navigator.pop(context,true),
+                          child: Text("OK"),
+                        ),
+
+                      ],
+                    ),
+                );
+              },
               child:  Text("Show Material  Alert",style: TextStyle(color: Colors.black,fontSize: 25),),
             ),
             SizedBox(height: 20,),
