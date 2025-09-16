@@ -11,6 +11,7 @@ class _EntryScreenState extends State<EntryScreen> {
 
   final _formKey = GlobalKey<FormState>();
   final nameController = TextEditingController();
+  final emailController = TextEditingController();
   final dobController = TextEditingController();
   final cityController = TextEditingController();
   final addressController = TextEditingController();
@@ -31,6 +32,7 @@ class _EntryScreenState extends State<EntryScreen> {
           child: Column(
             children: [
               buildTextField(controller: nameController, label: "Name"),
+              buildTextField(controller: emailController, label: "Email"),
               buildTextField(
                 controller: dobController,
                 label: "DOB",
@@ -76,6 +78,7 @@ class _EntryScreenState extends State<EntryScreen> {
         },
         body: jsonEncode({
           'name': nameController.text,
+          'email': emailController.text,
           'dob': dobController.text,
           'city': cityController.text,
           'address': addressController.text,
